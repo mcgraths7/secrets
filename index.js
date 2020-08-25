@@ -43,6 +43,14 @@ if (hash) {
 const submitBtn = document.querySelector('.button');
 submitBtn.addEventListener('click', onSubmit);
 
+const inputBox = document.querySelector('.input');
+inputBox.addEventListener('keydown', (e) => {
+  if (e.keyCode === 13) {
+    console.log('s');
+    onSubmit(e);
+  }
+});
+
 const shareField = document.querySelector('#share');
 shareField.addEventListener('click', function () {
   this.select();
